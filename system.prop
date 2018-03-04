@@ -73,3 +73,6 @@ persist.radio.ROTATION_ENABLE=1
 
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
+
+# Focus Fix
+persist.camera.focus_fix=0
