@@ -41,7 +41,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 TARGET_VENDOR := leeco
 
-<!-- Bootleggers official stuffs -->
+# Bootleggers official stuffs 
 
 DEVICE_MAINTAINERS="kihope"
 BOOTLEG_BUILD_TYPE="Shishufied"
