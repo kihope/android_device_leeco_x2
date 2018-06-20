@@ -21,12 +21,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/leeco/x2/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := bootleg_x2
+PRODUCT_NAME := revengeos_x2
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeEco
 PRODUCT_BRAND := LeEco
+
+# Inherit some common AOSP stuff.
+TARGET_ARCH := arm64
+TARGET_DENSITY := xxxhdpi
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_INCLUDE_ARCORE := true
+
+LINEAGE_BUILDTYPE := RELEASE
+OTA_XML := https://raw.githubusercontent.com/Lucchetto/OTAs/master/x2.xml
 
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
 
@@ -39,7 +48,3 @@ BUILD_FINGERPRINT := LeEco/LeMax2_WW/le_x2:6.0.1/FKXOSOP5801910311S/letv10310125
 
 TARGET_VENDOR := leeco
 
-# Bootleggers official stuffs 
-
-DEVICE_MAINTAINERS="kihope"
-BOOTLEG_BUILD_TYPE="Shishufied"

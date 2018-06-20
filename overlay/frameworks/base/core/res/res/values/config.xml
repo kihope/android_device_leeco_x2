@@ -116,10 +116,9 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">83</integer>
+   
     
-    <bool name="config_button_brightness_support">true</bool>
-    <integer name="config_button_brightness_default">128</integer>
+    
 
 
     <!-- If enabled, capacitive keys will only light up when pressed.
