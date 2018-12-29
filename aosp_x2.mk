@@ -20,10 +20,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/leeco/x2/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some AOSP stuff.
+IS_PHONE := true
+TARGET_GAPPS_ARCH :=arm64
+TARGET_ARCH := arm64
+TARGET_DEBSITY := xxxhdpi
+TARGET_BOOT_ANIMATION_RES := 1440
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_x2
+PRODUCT_NAME := aosp_x2
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeEco
 PRODUCT_BRAND := LeEco
